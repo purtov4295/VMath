@@ -5,7 +5,7 @@ int main()
 {
     double mas[3][4] = {-1, -1, 1, -1,
                         2, -1, 2, 3,
-                        -3, -1, 1, 3};
+                        3, -1, 1, 3};
 
     // if(abs(mas[1][0]) < abs(mas[2][0])){
     //     cout << mas[2][2] << endl;
@@ -110,12 +110,13 @@ int main()
         }
     }
     // cout << mas[2][0] << endl;
-    double x = 2/3, y, z;
+    double x , y, z;
+    z = mas[2][3] / mas[2][2];
+    y = (-(mas[1][2] * z)) / mas[1][1];
+    x = (mas[0][3] - mas[0][1] * y - mas[0][2] * z) / mas[0][0];
+    cout << z << endl;
+    cout << y << endl;
     cout << x << endl;
-//     z = mas[2][3]/mas[2][2];
-//     y = (-(mas[1][2]*z))/mas[1][1];
-//     cout << z << endl;
-// cout << y << endl;
-//     system("pause");
+    system("pause");
     return 0;
 }
