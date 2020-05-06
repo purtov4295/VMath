@@ -3,9 +3,9 @@ using namespace std;
 
 int main()
 {
-    // double mas[3][4] = {-1, -1, 1, -1,
-    //                     2, -1, 2, 3,
-    //                     3, -1, 1, 3};
+    double mas[3][4] = {-1, -1, 1, -1,
+                        2, -1, 2, 3,
+                        3, -1, 1, 3};
     
     // double mas[3][4] = {2, -1, 2, 3,
     //                     -1, -1, 1, -1,
@@ -20,9 +20,9 @@ int main()
     //                     4, 6, 1, 3,
     //                     2, 1, -2, -1};
     
-    double mas[3][4] = {5, 5, 5, 5,
-                        5, 5, 5, 5,
-                        5, 5, 5, 5};
+    // double mas[3][4] = {1, 1, 1, 1,
+    //                     1, 1, 1, 1,
+    //                     1, 1, 1, 1};
 
     // if(abs(mas[1][0]) < abs(mas[2][0])){
     //    double c=mas[1][0]/mas[2][0];
@@ -144,21 +144,21 @@ int main()
     }
     // cout << mas[2][0] << endl;
     double x , y, z;
-    if(mas[2][2] != 0){
+    if(mas[2][2] == 0 || mas[1][1] == 0 || mas[0][0] == 0)
+    {
+        cout << "z = любое число" << endl;
+        cout << "y = любое число" << endl;
+        cout << "x = любое число" << endl;
+    }
+    else
+    {
         z = mas[2][3] / mas[2][2];
         cout << "z = " << z << endl;
-    }
-    else cout << "z = любое число" << endl;
-    if(mas[1][1] != 0){
         y = (mas[1][3]-(mas[1][2] * z)) / mas[1][1];
         cout << "y = " << y << endl;
-    }
-    else cout << "y = любое число" << endl;
-    if(mas[0][0] != 0){
         x = (mas[0][3] - mas[0][1] * y - mas[0][2] * z) / mas[0][0];
         cout << "x = " << x << endl;
     }
-    else cout << "x = любое число" << endl;
     
     system("pause");
     return 0;
